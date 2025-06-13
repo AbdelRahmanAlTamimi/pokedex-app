@@ -29,8 +29,8 @@ export function getCommands(): Record<string, CLICommand> {
             callback: commandMapBack,
         },
         explore: {
-            name: "explore",
-            description: "It takes the name of a location area as an argument.",
+            name: "explore <location_name>",
+            description: "It takes the name of a location area as an argument and display a list of all the Pokémon in a given area.",
             callback: command_explore
         }
     };
