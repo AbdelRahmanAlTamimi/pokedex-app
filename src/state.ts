@@ -5,6 +5,7 @@ import { PokeAPI } from "./pokeapi.js"
 export type State = {
     rl: Interface;
     commands: Record<string, CLICommand>;
+    argument: string
     pokeAPI: PokeAPI;
     nextLocationsURL: string;
     prevLocationsURL: string
@@ -26,6 +27,7 @@ export function initState() {
     return {
         rl: rl,
         commands: getCommands(),
+        argument: "",
         pokeAPI: new PokeAPI(),
         nextLocationsURL: "",
         prevLocationsURL: "",

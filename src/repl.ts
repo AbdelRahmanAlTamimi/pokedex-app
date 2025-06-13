@@ -16,6 +16,7 @@ export async function startREPL(state: State) {
 
         const commandName = words[0];
         const command = state.commands[commandName];
+        state.argument = words[1]
 
         if (command) {
             try {
