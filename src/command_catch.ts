@@ -1,6 +1,6 @@
 import type { State } from "./state.js";
 
-export async function command_catch(state: State, ...args: string[]) {
+export async function commandCatch(state: State, ...args: string[]): Promise<void> {
     if (args.length !== 1) {
         throw new Error("you must provide a pokemon name");
     }

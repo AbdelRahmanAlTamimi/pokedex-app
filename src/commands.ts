@@ -1,10 +1,10 @@
 import { commandExit } from "./command_exit.js";
-import { command_help } from "./command_help.js";
+import { commandHelp } from "./command_help.js";
 import { commandMapForward, commandMapBack } from "./command_map.js";
-import { command_explore } from "./command_explore.js";
-import { command_catch } from "./command_catch.js"
-import { command_inspect } from "./command_inspect.js";
-import { command_pokedex } from "./command_pokedex.js";
+import { commandExplore } from "./command_explore.js";
+import { commandCatch } from "./command_catch.js";
+import { commandInspect } from "./command_inspect.js";
+import { commandPokedex } from "./command_pokedex.js";
 
 import type { CLICommand } from "./state.js";
 
@@ -19,7 +19,7 @@ export function getCommands(): Record<string, CLICommand> {
         help: {
             name: "help",
             description: "Displays a help message",
-            callback: command_help,
+            callback: commandHelp,
         },
         map: {
             name: "map",
@@ -34,22 +34,22 @@ export function getCommands(): Record<string, CLICommand> {
         explore: {
             name: "explore <location_name>",
             description: "It takes the name of a location area as an argument and display a list of all the Pokémon in a given area.",
-            callback: command_explore
+            callback: commandExplore
         },
         catch: {
             name: "catch <pokemon_name>",
             description: "catch pokemon",
-            callback: command_catch
+            callback: commandCatch
         },
         inspect: {
             name: "inspect <pokemon_name>",
             description: "inspect exist pokemon",
-            callback: command_inspect
+            callback: commandInspect
         },
         pokedex: {
             name: "pokedex",
             description: "List all caught Pokémon",
-            callback: command_pokedex
+            callback: commandPokedex
         }
     };
 }

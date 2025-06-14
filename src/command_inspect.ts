@@ -1,8 +1,8 @@
 import type { State } from "./state.js";
 
-export async function command_inspect(state: State, ...args: string[]): Promise<void> {
+export async function commandInspect(state: State, ...args: string[]): Promise<void> {
     if (args.length !== 1) {
-        throw new Error("you must provide a pokemon name");
+        throw new Error("You must provide a pokemon name");
     }
 
     const name = args[0];
